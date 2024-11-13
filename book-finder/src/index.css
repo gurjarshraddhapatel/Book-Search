@@ -65,7 +65,6 @@ ul{
   font-size: 30px;
 }
 .container-fluid{
-  /* background-color: rebeccapurple; */
   position: absolute;
   top: 620px;
 
@@ -84,6 +83,7 @@ ul{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 }
 
 #searchQueryInput {
@@ -105,7 +105,6 @@ ul{
   background: none;
   padding-right: 60px !important;
   color: tomato;
-
   border: none;
   outline: none;
 }
@@ -117,3 +116,70 @@ button{
   color: #CB735D;
 }
 
+
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 35px;
+    padding: 18px;
+    text-align: center;
+  }
+  .para{
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .recent{
+    background-color:#ca7373df ;
+    color: white;
+    margin-top: 100px;
+    margin-left: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    width: 250px !important;
+  }
+  .recent-ul{
+    font-size: 18px;
+    color: #4b4a4a;
+    margin-left: 40px;
+    padding-top: 20px;
+  }
+  .inner-container{
+    background-image: url('./h.webp');
+    height: 660px;
+   
+  }
+  .searchBar {
+    width: 100% ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #searchQueryInput {
+    width: 100%;
+    margin-left: -20px;
+    height: 4.8rem;
+    background: #fff;
+    outline: none;
+    border: none;
+    padding-left: 25px !important;
+    box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.397);
+    font-size: 1rem;
+    border-radius:50px !important;
+  }
+  
+  #searchQuerySubmit {
+    width: 3.5rem;
+    height: 2.8rem;
+    margin-left: -5rem;
+    background: none;
+    padding-right: 60px !important;
+    color: tomato;
+    border: none;
+    outline: none;
+  }
+}

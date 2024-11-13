@@ -55,7 +55,7 @@ const Home = () => {
           <div className='main-content'>
             <div className='content-container'>
                 <h1 className='heading'>Lets find your next favorite book!</h1>
-                <h5 className='pt-2  text-center '>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Praesentium, necessitatibus! <br /> Officia tempore quae ut aut, quia et totam ex dolores quam aliquam distinctio veritatis ad blanditiis beatae praesentium repudiandae eos?!</h5>
+                <h5 className='pt-2  text-center para '>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Praesentium, necessitatibus! <br /> Officia tempore quae ut aut, quia et totam ex dolores quam aliquam distinctio veritatis ad blanditiis beatae praesentium repudiandae eos?!</h5>
             </div>
           </div>
         </div>
