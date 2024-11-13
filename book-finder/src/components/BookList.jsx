@@ -1,28 +1,52 @@
-// src/components/BookList.js
 import PropTypes from 'prop-types';
+import './BookList.css'; // Import your CSS file here
 
 function BookList({ books, addToFavorites }) {
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Book Results</h2>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {books.map((book) => (
-          <li key={book.key} className="border p-4 rounded">
-            <h3 className="font-semibold">{book.title}</h3>
-            <p>Author: {book.author_name ? book.author_name.join(', ') : 'Unknown'}</p>
-            <p>First Published: {book.first_publish_year || 'N/A'}</p>
-            <p>Publisher: {book.publisher ? book.publisher.join(', ') : 'N/A'}</p>
-            <p>ISBN: {book.isbn ? book.isbn[0] : 'N/A'}</p>
-            <button
-              onClick={() => addToFavorites(book)}
-              className="mt-2 p-2 bg-green-500 text-white rounded"
-            >
-              Add to Favorites
-            </button>
-          </li>
-        ))}
-      </ul>
+    <>
+    <h2 className="text-2xl font-bold mb-4 text-center mt-5">Searched Results</h2>
+    <div className="bookcontainer container ">
+      {books.map((book) => (
+        <div key={book.key} className="book">
+          <div
+            className="bookpic"
+            style={{
+              backgroundImage: `url('./c.webp')`,
+            }}
+          >
+            
+          </div>
+          <div className="bookinfo">
+            <div className='detail-container'>
+            <div className="title">{book.title}</div>
+            <div className="author">{book.author_name ? book.author_name.join(', ') : 'Unknown'}</div>
+            </div>
+            <div className='main-controls'>
+            <ul className="controls">
+              <li className="control">
+                <a href="#">
+                <i className="fa-solid fa-cart-shopping"></i>
+
+                </a>
+              </li>
+              <li className="control">
+                <a href="#">
+                <i className="fa-solid fa-download"></i>
+                </a>
+              </li>
+              <li className="control deletebutton">
+                <a onClick={() => addToFavorites(book)}>
+                <i className="fa-solid fa-heart"></i>
+                  <span className="invisible">Delete</span>
+                </a>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
+    </>
   );
 }
 

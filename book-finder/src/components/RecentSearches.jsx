@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function RecentSearches({ searches, onSearch }) {
   return (
-    <div className="mb-4">
-      <h2 className="text-2xl font-bold">Recent Searches</h2>
-      <ul>
+    <div className="mt-lg-5  px-lg-5 container">
+      <h2 className=" recent ">Recent Searches</h2>
+      <ul className='recent-ul'>
         {searches.slice(-5).map((term, index) => (
           <li
             key={index}

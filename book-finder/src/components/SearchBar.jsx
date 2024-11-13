@@ -12,18 +12,23 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+   <div className="container-fluid ">
+     <form onSubmit={handleSubmit} className="mb-4">
+      <div className='searchBar'>
       <input
         type="text"
         placeholder="Search for books by title..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="p-2 border rounded w-full"
+        id="searchQueryInput" 
       />
-      <button type="submit" className="mt-2 p-2 bg-blue-500 text-white rounded">
-        Search
+      <button type="submit" id="searchQuerySubmit" className="mt-2 px-0 bg-blue-500  rounded">
+      <i className="fa-solid fa-magnifying-glass"></i>
       </button>
+      </div>
     </form>
+   </div>
   );
 }
 
